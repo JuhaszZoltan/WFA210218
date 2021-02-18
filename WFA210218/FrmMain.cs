@@ -20,8 +20,9 @@ namespace WFA210218
         public FrmMain()
         {
             conn = new SqlConnection(
-                @"Data Source=(localdb)\MSSQLLocalDB;" +
-                "Initial Catalog=kozossegiSzolgalat;");
+                @"Server = (localdb)\MSSQLLocalDB;" +
+                //"Database = kozossegiSzolgalat;");
+                $"AttachDbFileName = {Program.dbFileLocation}");
             InitializeComponent();
             cbEvismetlo.SelectedIndex = 0;
         }
